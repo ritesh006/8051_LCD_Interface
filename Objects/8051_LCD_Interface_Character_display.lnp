@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\LCD_Interface.obj" 
+TO ".\Objects\8051_LCD_Interface_Character_display" 
+PRINT(".\Listings\8051_LCD_Interface_Character_display.m51") RAMSIZE(256) 
