@@ -1,37 +1,37 @@
 /* -------------------Project Name--------------------					
-						LCD (16 x 2) Interface with 8051
+		LCD (16 x 2) Interface with 8051
 						    and display character								
 	Here we will use P89V51RD2 microcontroller 				
  ----------------------------------------------------	*/
  
 /* ------------------- Pin Configuration --------------		
 						
-						RS    RW 		E			D0  ----   D7
-					 P2.0	 P2.1  P2.2	 P1.0 ----  P1.7  
+					RS       RW    E          D0  ----   D7
+				       P2.0     P2.1  P2.2	 P1.0 ----  P1.7  
  ----------------------------------------------------	*/
  
  
  
-#include <reg52.h>							/* Register Header files for registers address */
+#include <reg52.h>		/* Register Header files for registers address */
 
 /* sbit_ is command like  #define */
 
-sbit RS = P2^0;									/* here port 2.0 is renamed as RS (register_select)   */
+sbit RS = P2^0;			/* here port 2.0 is renamed as RS (register_select)   */
 
-sbit RW = P2^1;									/* Port 2.1 is renamed as a RW (read / write) */
+sbit RW = P2^1;			/* Port 2.1 is renamed as a RW (read / write) */
 
-sbit E = P2^2;									/* Port 2.2 is renamed as a E (Enable) */
+sbit E = P2^2;		       /* Port 2.2 is renamed as a E (Enable) */
 
 
 
 void send_command(unsigned int command_value);			/* Prototyping of sending command value function */
 
-void send_data(unsigned int command_data);					/* Prototyping of sending data function */
+void send_data(unsigned int command_data);			/* Prototyping of sending data function */
 	
-void ms_delay(unsigned int time);									/* Prototyping of delay function */
+void ms_delay(unsigned int time);				/* Prototyping of delay function */
 
 
-void main ()						/* Main Start */
+void main ()	/* Main Start */
 {
 	
 	/* LCD Initialization */
@@ -70,7 +70,7 @@ void main ()						/* Main Start */
 	
 	
 	
-}				/* main ends here */
+}/* main ends here */
 
 
 
